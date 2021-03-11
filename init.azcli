@@ -3,7 +3,7 @@ az group create --name ngrp-dev-apim-poc-eu-rg --location westeurope
 az group create --name ngrp-dev-apim-poc-us-rg --location eastus
 az group create --name ngrp-dev-apim-poc-ca-rg --location centralcanada
 
-az vm create -n vm-eu -g ngrp-dev-apim-poc-eu-rg --image UbuntuLTS
-az vm create -n vm-us -g ngrp-dev-apim-poc-us-rg --image UbuntuLTS
-az vm create -n vm-ca -g ngrp-dev-apim-poc-ca-rg --image UbuntuLTS
+az vm create -n vm-eu -g ngrp-dev-apim-poc-eu-rg --image UbuntuLTS --generate-ssh-keys
+az vm create -n vm-us -g ngrp-dev-apim-poc-us-rg --image UbuntuLTS --generate-ssh-keys
+az vm create -n vm-ca -g ngrp-dev-apim-poc-ca-rg --image UbuntuLTS --generate-ssh-keys
 
