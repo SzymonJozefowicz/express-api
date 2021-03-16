@@ -17,6 +17,12 @@ steps:
     command: 'install'
     workingDir: '/'
 
+steps:
+- task: Npm@1
+  inputs:
+    command: 'start'
+    workingDir: '/'
+
 # - task: GitHubComment@0
 #   inputs:
 #     gitHubConnection: 'SzymonJozefowicz'
