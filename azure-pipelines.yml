@@ -6,6 +6,8 @@
 trigger:
 - main
 
+pr: none
+
 pool:
   vmImage: ubuntu-latest
 
@@ -15,8 +17,8 @@ steps:
     command: 'install'
     workingDir: '/'
 
-- task: GitHubComment@0
-  inputs:
-    gitHubConnection: 'SzymonJozefowicz'
-    repositoryName: '$(Build.Repository.Name)'
+# - task: GitHubComment@0
+#   inputs:
+#     gitHubConnection: 'SzymonJozefowicz'
+#     repositoryName: '$(Build.Repository.Name)'
 
