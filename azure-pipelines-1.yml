@@ -7,7 +7,7 @@ trigger:
 - none
 
 pr:
-- maint
+- main
 
 pool:
   vmImage: ubuntu-latest
