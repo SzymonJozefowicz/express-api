@@ -6,16 +6,17 @@
 trigger:
 - main
 
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: Npm@1
+  inputs:
+    command: 'install'
+    workingDir: '/'
 
 - task: GitHubComment@0
   inputs:
     gitHubConnection: 'SzymonJozefowicz'
     repositoryName: '$(Build.Repository.Name)'
 
-pool:
-  vmImage: ubuntu-latest
-
-- task: Npm@1
-  inputs:
-    command: 'install'
-    workingDir: '/'
