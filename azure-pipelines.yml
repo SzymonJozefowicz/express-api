@@ -6,16 +6,16 @@
 trigger:
 - main
 
+
+- task: GitHubComment@0
+  inputs:
+    gitHubConnection: 'SzymonJozefowicz'
+    repositoryName: '$(Build.Repository.Name)'
+
 pool:
   vmImage: ubuntu-latest
 
-steps:
-- task: NodeTool@0
+- task: Npm@1
   inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
-
-- script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
+    command: 'install'
+    workingDir: '/'
